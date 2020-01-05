@@ -72,6 +72,41 @@
         background: #fff url("../images/main/map_arrow.gif")no-repeat 190px 15px; padding-right: 40px;
 }}
 
+
+//m_ice
+.article { 
+    width: 100%;margin-top: 46px;
+}
+.sub_tit_box{
+    margin-top: 46px;width: 100%;height:100%;position: absolute;background:url("../images/m_ice/sub_banner_bg_3x.png")no-repeat;
+    h3 {color: #ffffff;font-size: 45px;font-family: roboT;font-weight: 600;display:block;text-align: center;padding-top: 156px;}
+}
+.ice_button {
+    text-align: center;
+        ul {width: calc(100% - 5px);z-index: 10;}
+        ul li { display: inline-block; margin-left: 5px; line-height: 30px;
+        button { width: 60px; height: 25px;font-size: 13px; font-weight: 500;text-align: center; background: #ffffff;margin-top: 90px;}
+        }
+}
+.menu_wrap {
+    ul li {margin-top: 20px;}
+}
+.menubox {
+    @include shadow(0px 0px 5px rgba(0, 0, 0,.15));
+    width: 90%;margin: 0 auto; height: auto;
+    img {display: inline-block;}
+}
+.f_r_txt{
+    float: right;position: relative;
+    ul li {float: left;border: 1px solid #fe6caa; padding: 2px 5px;margin-left: 20px;font-weight: 400;} 
+    h4 { font-family: baskin; font-weight: 500; font-size: 30px;display: block;}
+    span {font-size: 9px;color: #999;}
+    button {
+        @include radius(50px);
+        display: block;width: 120px;height: 40px;background: #fe6caa;color: #ffffff; font-weight: 600; font-size: 15px;}
+}
+
+
 @media 
 screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dpi),
@@ -86,5 +121,21 @@ screen and (min-resolution: 3dpi),
 screen and (min-resolution: 3dppx) {
     .map{ 
         background-image: url("../images/main/map_bg_3x.jpg");
+    }
+}
+@media 
+screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 2dpi),
+screen and (min-resolution: 2dppx) {
+    .sub_tit_box{ 
+        background-image: url("../images/m_ice/sub_banner_bg_2x.png");
+    }
+}
+@media 
+screen and (-webkit-min-device-pixel-ratio: 3),
+screen and (min-resolution: 3dpi),
+screen and (min-resolution: 3dppx) {
+    .sub_tit_box{ 
+        background-image: url("../images/m_ice/sub_banner_bg_3x.png");
     }
 }
