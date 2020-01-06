@@ -2,7 +2,7 @@
 @import "_var" , "_mixin";
 
 #article{
-    text-align: center;
+    text-align: center;margin-top: 46px;margin-bottom: 50px;
 }
 .slider{ 
 .swiper-container {
@@ -13,11 +13,12 @@
     }
     .swiper-pagination-bullet {
         @include radius(0);
-        background: url("../images/main/slider_icon_non_1x.gif") no-repeat; width: 10px; height: 8px;opacity: 1;
+        background: url("../images/main/slider_icon_non.png") no-repeat; width: 12px; height: 10px;opacity: 1;
         &.swiper-pagination-bullet-active{
-            background-image: url("../images/main/slider_icon_on_1x.gif"); width: 10px; height: 15px;
+            background-image: url("../images/main/slider_icon_on.png"); width: 12px; height: 17px;
         }
     }
+    
 
 } 
 .search{
@@ -34,14 +35,14 @@
         >span {font-weight: 600;}}
     .searchbar {
         @include radius(50px);
-        width: 90%;height: 35px; background: #fff;position: absolute;left: 50%;margin-left: -45%;top: 650px;
-        img{ width: 20px;height: 20px;margin: 0 auto;position: absolute; right: 20px;top: 6px;}
+        width: 90%;height: 35px; background: #fff;display: block;margin: 0 auto;margin-top: 35px;
+        img{ width: 20px;height: 20px;position: absolute;right: 20px;margin-top: 6px;margin-right: 30px;}
         }
-    .searchtag{
+    .searchtag{ margin-top: 20px;
         text-align: center;
         ul {width: calc(100% - 5px);z-index: 10;}
         ul li { display: inline-block; margin-left: 5px; line-height: 30px;
-        button { width: 60px; height: 25px;font-size: 13px; font-weight: 500;text-align: center; background: #ffffff;margin-top: 90px;}
+        button { width: 60px; height: 25px;font-size: 13px; font-weight: 500;text-align: center; background: #ffffff;}
         }
         button.on {
             @include shadow(0px 0px 5px rgba(0, 0, 0,.12));
@@ -52,9 +53,9 @@
 }
 .delivery{
     background: #ffffff;
-   h3 {margin-top: 70px; font-weight: 600;font-size: 25px;margin-bottom: 50px;}
-   h3::after{content:"";width: 140px;height: 4px;background: #fe6caa;position: absolute;top: 930px;left: 50%;margin-left: -70px;}
-   strong , p {font-size: 14px;}
+   h3 {margin-top: 70px; font-weight: 600;font-size: 25px;margin-bottom: 25px;}
+   h3::after{content:"";width: 140px;height: 4px;background: #fe6caa;position: relative;margin-top: 20px;display: block;left: 50%;margin-left: -70px;}
+   strong , p {font-size: 14px;line-height:2;}
    ul {margin: 50px 50px;}
    ul li {
         @include shadow(0px 0px 5px rgba(0, 0, 0,.12));
@@ -83,34 +84,92 @@
 .sub_tit_box{
     @include bgcover(cover);
     width: 100%;height:110px;background:url("../images/m_ice/sub_banner_bg_1x.png")no-repeat;
-    h3 {color: #ffffff;font-size: 45px;font-family: roboT;font-weight: 600;display:block;text-align: center;padding-top: 40px;}
+    h3 {color: #ffffff;font-size: 40px;font-family: roboT;font-weight: 600;display:block;text-align: center;line-height: 110px;}
 }
 .ice_button {
+    @include borderBox;
     text-align: center;
+    &::after{content:""; width: 100%; height: 1px;background: #FFB2E1;display: block;margin-top: 15px;}
+    margin-top: 15px;
         ul {width: calc(100% - 5px);z-index: 10;}
-        ul li { display: inline-block; margin-left: 5px; line-height: 30px;
-        button { width: 60px; height: 25px;font-size: 13px; font-weight: 500;text-align: center; background: #ffffff;margin-top: 90px;}
+        ul li { display: inline-block; margin-left: 7px; line-height: 30px;
+        a { width: 60px; height: 25px;font-size: 12px; font-weight: 500;text-align: center; background: #ffffff;margin-top: 90px; border: 1px solid #fe6caa;padding: 3px 7px;margin: 0 auto;}
+        }
+}
+.ot_menu{margin-top: 15px;
+    a span{ 
+        @include radius(8px);
+        float: left; display: inline-block;width: 110px;border: 1px solid #fe6caa;font-size: 14px;background: #ffffff;padding: 5px 10px; margin-left: 20px;
+        &::after{content:"";position: absolute;background: url("../images/common/nav_side_on.png") no-repeat;width: 12px;height: 7px;margin-top: 7px;margin-left: 4px;}
+    }
+    ul {
+        @include radius(8px);
+        display: inline-block;display: none;
+        float: left; margin-left: 20px;width: 130px;border: 1px solid #fe6caa;font-size: 14px;background: #ffffff;margin-right: 12px;position: absolute;margin-top: 35px;left: 0;
+        li {display: block;padding: 5px 10px;border-bottom: 1px solid #fe6caa;}
+        li:nth-child(3){border-bottom: none;}
+        &.on {display: block;}
+    }
+
+    button {
+        @include radius(8px);
+        width: 100px;display:inline-block;padding: 5px 10px;font-size: 14px;background: #fe6caa;color: #ffffff;
+        margin-left: -20%;
         }
 }
 .menu_wrap {
     margin: 0 25px;
     ul li {margin-top: 20px;}
 }
-.menubox {position: relative;
-    @include shadow(0px 0px 5px rgba(0, 0, 0,.15));
+.new{
+    width: 90px;height: 42px;position: absolute; left: 15px;z-index: -1;margin-top: -10px;
+}
+.menubox {position: relative;z-index: -1;
+    @include shadow(0px 0px 5px rgba(165, 81, 81, 0.15));
     margin: 0 auto; height: auto;min-height: 125px;
-    img {position: absolute;bottom: 0;left: 10px;}
-    &::after { content:""; display: block; clear: both;}
+    img {position: absolute;bottom: 0;left: 10px;z-index: -1; min-height: 140px;min-width: 30px;margin-left: 10px;}
+    &::before{content:""; background: url("../images/m_ice/deco_normal_2x.png")no-repeat;position: absolute;width: 145px;height: 140px;left: 0px;bottom: 20px;margin-left: 5px;}
+    &::after { content:""; display: block; clear: both;
+    }
 }
 .f_r_txt{
-    float: right;position: relative;
+    float: right;position: relative;max-width: 50%;margin-right: 20px;min-height: 140px;
     ul::after{ content:""; display: block; clear: both;}
-    ul li {float: left;border: 1px solid #fe6caa; padding: 2px 5px;margin-left: 20px;font-weight: 400;} 
-    h4 { font-family: baskin; font-weight: 500; font-size: 25px;display: block; line-height: 1.5;padding-top: 10px;}
-    span {font-size: 9px;color: #999;display: block;}
+    ul li {float: right;border: 1px solid #fe6caa; padding: 2px 5px;margin-left: 10px;font-weight: 400;margin-top: 20px;} 
+    h4 { font-family: baskin; font-weight: 500; font-size: 25px;display: block; line-height: 1.5;padding-top: 10px;text-align: right;}
+    span {font-size: 9px;color: #999;display: block;margin-bottom: 10px;text-align: right;line-height: 1.2;}
     button {
         @include radius(50px);
-        display: block;width: 60px;height: 20px;background: #fe6caa;color: #ffffff; font-weight: 600; font-size: 10px;}
+        display: block;width: 100px;height: 30px;background: #fe6caa;color: #ffffff; font-weight: 600; font-size: 10px;float: right;margin-bottom: 20px;}
+}
+.cashbox{
+    @include radius(10px);
+    width: 200px;background: #ffffff;border: 2px solid #fe6caa;position: absolute;bottom:0px;right: 50px;visibility:hidden;
+    ul li {margin-bottom: -10px;}
+    ul li a{
+        @include radius(25px);
+        display: block;width: 140px;text-align: center;background: #fe6caa;margin: 0 auto;color: #ffffff;padding: 3px 10px;font-size: 14px;margin-bottom: 20px;font-weight: 600;
+        &.c_y {background: #F8E910;color:#402D33;}
+        &.c_m {background: #28BEBB;}
+        &.c_r {background: #EE001F;}
+    }
+    button {
+        @include radius(50%);
+        width: 40px; height: 40px; background: #fe6caa;position: absolute;right: -20px;top: -25px;background: #ffffff;border: 2px solid #fe6caa;
+        .line {
+            @include radius(100px);
+            @include transition(all 0.3s);
+            position: absolute;left: 0;margin-top: 10px;margin-left: 8px;
+            width: 20px; height: 3px;background:#FE6CAA;
+            &.top {
+                @include transform(rotate(45deg));
+                top: 7px;}
+            &.btm {
+                @include transform(rotate(-45deg));
+                top: 7px;}
+        }
+    }
+    &.on {visibility: visible;}
 }
 
 //a_history

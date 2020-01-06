@@ -219,26 +219,29 @@ address {
       #gnb > ul.gnb-txt ul li ul li a {
         margin-left: 50px; }
 
-.sign {
-  width: 100%;
-  height: 150px;
-  background: url("../images/main/pink_noz_bg.gif");
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center; }
-  .sign li {
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    float: left;
-    display: block;
+.signbox {
+  display: block; }
+  .signbox .sign {
+    width: 100%;
+    height: 150px;
+    background: url("../images/main/pink_noz_bg.gif");
+    position: absolute;
+    top: 0;
+    left: 0;
     text-align: center;
-    width: 120px;
-    height: 40px;
-    background: #ffffff;
-    line-height: 40px;
-    margin-top: 80px;
-    margin-left: 20px; }
+    margin: 0 auto; }
+    .signbox .sign li {
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      float: left;
+      display: block;
+      text-align: center;
+      width: 120px;
+      height: 40px;
+      background: #ffffff;
+      line-height: 40px;
+      margin-top: 80px;
+      margin-left: 40px; }
 
 #footer {
   position: relative;
