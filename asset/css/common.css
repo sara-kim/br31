@@ -279,7 +279,7 @@ address {
     max-width: 200px; }
     #footer .ft_right a, #footer .ft_right span {
       display: block;
-      width: calc(90%);
+      width: 70%;
       text-align: center;
       height: 30px;
       line-height: 30px;
@@ -290,7 +290,8 @@ address {
       font-weight: 600;
       margin-bottom: 10px;
       background: #fff;
-      color: #fe6caa; }
+      color: #fe6caa;
+      text-align: center; }
     #footer .ft_right .f_arrow {
       display: block;
       position: absolute;
@@ -301,15 +302,23 @@ address {
       background: #fe6caa;
       border: 1px solid #fff; }
 
-.family_site {
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  width: calc(90%);
-  background: #fff;
-  color: #fe6caa;
-  letter-spacing: 20; }
-  .family_site li a {
-    border-bottom: 1px solid #ffdef1;
-    padding: 5px 0; }
+.family {
+  position: relative; }
+  .family ul {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: -410px;
+    border: 1px solid #fe6caa;
+    width: 70%;
+    background: #fff;
+    color: #fe6caa;
+    letter-spacing: 20;
+    text-align: center;
+    z-index: 1000;
+    position: absolute; }
+    .family ul li a {
+      border-bottom: 1px solid #ffdef1;
+      padding: 5px 0;
+      margin-left: 20px; }
 
 /*# sourceMappingURL=common.css.map */

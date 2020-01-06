@@ -7,9 +7,9 @@ $(document).ready(function(){
     });
     
     //m_ice slide
-	var $otherMenu=$("#article .ot_menu");
-	var $btn=$otherMenu.find("a").first();
-	var $text=$otherMenu.find("span");
+	var $family=$("#footer .family");
+	var $btn=$family.find("a").first();
+	var $text=$family.find("span");
 	var tgHref;
 	$btn.on("click",function  (e) {
 		e.preventDefault();
@@ -17,7 +17,8 @@ $(document).ready(function(){
 		$(this).next().on("click",function  () {
 			$(this).stop().slideUp();
 		});
-		$otherMenu.find(">ul>li>a").on("click",function  (e) {
+
+		$family.find(">ul>li>a").on("click",function  (e) {
 			e.preventDefault();
 			var tgTxt=$(this).text();
 			tgHref=$(this).attr("href");
