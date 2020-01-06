@@ -2,12 +2,20 @@
   text-align: center; }
 
 .slider .swiper-container {
-  height: 400px; }
-  .slider .swiper-container .swiper-slide {
-    position: relative;
-    height: 100%; }
-  .slider .swiper-container .swiper-pagination-fraction {
-    bottom: 100px; }
+  width: 100%; }
+.slider .swiper-slide img {
+  width: 100%; }
+.slider .swiper-pagination-bullet {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: url("../images/main/slider_icon_non_1x.gif") no-repeat;
+  width: 10px;
+  height: 8px;
+  opacity: 1; }
+  .slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-image: url("../images/main/slider_icon_on_1x.gif");
+    width: 10px;
+    height: 15px; }
 
 .search {
   height: 400px;
@@ -151,15 +159,16 @@
     background: #fff url("../images/main/map_arrow.gif") no-repeat 190px 15px;
     padding-right: 40px; }
 
-.article {
+#article {
   width: 100%;
   margin-top: 46px; }
 
 .sub_tit_box {
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url("../images/m_ice/sub_banner_bg_3x.png") no-repeat; }
+  height: 110px;
+  background: url("../images/m_ice/sub_banner_bg_1x.png") no-repeat; }
   .sub_tit_box h3 {
     color: #ffffff;
     font-size: 45px;
@@ -167,7 +176,7 @@
     font-weight: 600;
     display: block;
     text-align: center;
-    padding-top: 156px; }
+    padding-top: 40px; }
 
 .ice_button {
   text-align: center; }
@@ -187,21 +196,34 @@
       background: #ffffff;
       margin-top: 90px; }
 
-.menu_wrap ul li {
-  margin-top: 20px; }
+.menu_wrap {
+  margin: 0 25px; }
+  .menu_wrap ul li {
+    margin-top: 20px; }
 
 .menubox {
+  position: relative;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-  width: 90%;
   margin: 0 auto;
-  height: auto; }
+  height: auto;
+  min-height: 125px; }
   .menubox img {
-    display: inline-block; }
+    position: absolute;
+    bottom: 0;
+    left: 10px; }
+  .menubox::after {
+    content: "";
+    display: block;
+    clear: both; }
 
 .f_r_txt {
   float: right;
   position: relative; }
+  .f_r_txt ul::after {
+    content: "";
+    display: block;
+    clear: both; }
   .f_r_txt ul li {
     float: left;
     border: 1px solid #fe6caa;
@@ -211,21 +233,24 @@
   .f_r_txt h4 {
     font-family: baskin;
     font-weight: 500;
-    font-size: 30px;
-    display: block; }
+    font-size: 25px;
+    display: block;
+    line-height: 1.5;
+    padding-top: 10px; }
   .f_r_txt span {
     font-size: 9px;
-    color: #999; }
+    color: #999;
+    display: block; }
   .f_r_txt button {
     -webkit-border-radius: 50px;
     border-radius: 50px;
     display: block;
-    width: 120px;
-    height: 40px;
+    width: 60px;
+    height: 20px;
     background: #fe6caa;
     color: #ffffff;
     font-weight: 600;
-    font-size: 15px; }
+    font-size: 10px; }
 
 .sub_tit_box_h {
   width: 100%;
