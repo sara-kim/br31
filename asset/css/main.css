@@ -491,6 +491,13 @@
     height: 90px;
     border: 2px solid #fe6caa;
     margin-top: -47px; }
+  .timeline_box .story_img.on {
+    -webkit-transform: scale 1.2;
+    transform: scale 1.2;
+    background-color: #fe6caa; }
+  .timeline_box .story_img.on::after {
+    content: "";
+    background-image: url("../images/a_history/btn_1_on.png"); }
 .timeline_box .txt-box {
   text-align: left;
   width: 50%;

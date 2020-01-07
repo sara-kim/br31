@@ -31,4 +31,10 @@ $(document).ready(function(){
 	$button.on('click', function (){
 		alert();
 	});
+
+	//a_history
+	var $scBtn = $('#article .timeline_box button');
+	$scBtn.on('click', function(){
+		$(this).addClass('on');
+	} );
 });
