@@ -292,19 +292,11 @@ address {
       background: #fff;
       color: #fe6caa;
       text-align: center; }
-    #footer .ft_right .f_arrow {
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      width: 8px;
-      height: 8px;
-      background: #fe6caa;
-      border: 1px solid #fff; }
 
 .family {
   position: relative; }
   .family ul {
+    display: none;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     margin-top: -410px;
@@ -319,6 +311,6 @@ address {
     .family ul li a {
       border-bottom: 1px solid #ffdef1;
       padding: 5px 0;
-      margin-left: 20px; }
+      margin: 0 auto; }
 
 /*# sourceMappingURL=common.css.map */

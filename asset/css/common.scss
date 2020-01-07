@@ -173,20 +173,17 @@ body, h1, h2, h3, h4, h5, h6, ul, button, p, figure { margin: 0; padding: 0; }
             @include radius(8px);
             font-weight: 600;margin-bottom: 10px;background: #fff;color: #fe6caa;text-align: center;
         }
-        .f_arrow{
-            display: block;position: absolute;top: 10px;right: 20px; width: 8px; height: 8px; background: #fe6caa; border: 1px solid #fff;
-        }
     }
 }
 
 .family{
     position: relative;
-  ul {
+  ul {display: none;
     @include radius(8px);
       margin-top: -410px;border: 1px solid #fe6caa;width:70%;background: #fff;color: #fe6caa;letter-spacing: 20;text-align: center; z-index: 1000;position: absolute;
-      li a {border-bottom: 1px solid #ffdef1;padding: 5px 0; margin-left: 20px;
-         }
-        }  
+      li a {border-bottom: 1px solid #ffdef1;padding: 5px 0;margin: 0 auto;}
+        } 
 }
+
 
 
