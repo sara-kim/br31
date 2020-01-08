@@ -83,22 +83,22 @@ body, h1, h2, h3, h4, h5, h6, ul, button, p, figure { margin: 0; padding: 0; }
 /* header */
 #wrap {
     font-family: notos; font-weight: 400; font-size: 12px; line-height: 22px; color:#FE6CAA;
-    overflow:hidden;min-width: 320px;
+    overflow:hidden;min-width: 320px;max-width: 1080px; margin: 0 auto;
 }
 #header { 
     @include borderBox;
     z-index: 1000;
     text-align: center;
-    position: fixed;top: 0;left: 0; height: 46px;width: 100%;background: #ffffff;
+    position: fixed;top: 0;left: 0; height: 60px;width: 100%;background: #ffffff;
 }
 .logo { 
-    width: 110px;
-    position: absolute;top: 13px;left: 50%;margin-left: -55px;
+    width: 150px;
+    position: absolute;top: 22px;left: 50%;margin-left: -75px;
 }
 .btn_menu{
     z-index: 1100;
     & , .line {position: absolute;}
-    top: 13px;width: 20px;right: 30px;height: 17px;
+    width: 20px;height: 20px;margin-top: 25px;right: 30px;
     .line {
     @include radius(10px);
     @include transition(all 0.3s);
@@ -108,7 +108,7 @@ body, h1, h2, h3, h4, h5, h6, ul, button, p, figure { margin: 0; padding: 0; }
     &.btm { top: 14px;}
 }
     &.active {
-        .line{background: #fff !important;}
+        .line{background: #fff;}
         .top {
             @include transform(rotate(45deg));
             top: 7px;}
@@ -125,7 +125,7 @@ body, h1, h2, h3, h4, h5, h6, ul, button, p, figure { margin: 0; padding: 0; }
     line-height: 20px;padding-top: 80px;
     li a {display: block;height: 35px;line-height: 35px;color: #fe6caa; }
     > li{ font-size: 13px; font-family: roboT; font-weight: 600;
-        > a{position: relative;padding: 25px 40px;font-size: 18px;font-weight: 500;border-bottom: 1px solid #fe6caa;display: block;}
+        > a{position: relative;padding: 25px 40px;font-size: 18px;font-weight: 500;display: block;}
         > a::before {content:"";position: absolute; right:20px;top: 35px;background: url("../images/common/nav_side.png") no-repeat; width: 7px;height: 12px; }
         &.on > a::after{content:"";position: absolute;top: 35px;left: 20px; background:url("../images/common/nav_on_arrow.png") no-repeat;width: 15px;height: 8px;}
         &.on > a::before{@include transform(rotate(90deg));}
@@ -145,44 +145,26 @@ body, h1, h2, h3, h4, h5, h6, ul, button, p, figure { margin: 0; padding: 0; }
     }
 }
 }
-.signbox{display: block;
+.signbox{
 .sign {
+    -webkit-display: flex;display: flex;justify-content: center;align-items: center;
     width: 100%;height: 150px; background:url("../images/main/pink_noz_bg.gif");position: absolute;top: 0;left: 0;text-align: center;margin: 0 auto;
     li {
         @include radius(8px);
-        float: left;display: block;text-align: center; width: 120px; height: 40px; background: #ffffff;line-height: 40px;
-        margin-top: 80px;margin-left: 40px;
+        float: left;display: inline-block;text-align: center; width: 120px; height: 40px; background: #ffffff;line-height: 40px;
+        margin-top: 50px;
+        & + li {margin-left: 40px;}
     }
  } 
 }
 
-#footer{ position: relative;
-    background: #fe6caa; width: 100%;padding: 30px 20px; color: #ffffff;
-    img{ width: 120px; margin-bottom: 10px;}
-    .ft_left {font-size: 8px; width: 65%; max-width: 400px;
+#footer{position: relative;
+    background: #fe6caa; width: 100%;padding: 30px 20px; color: #ffffff;line-height: 2;
+    a img{ width: 140px; margin-bottom: 5px;margin-left: 10%;}
+    .ft_left {font-size: 12px;width: 80%;margin: 0 auto;
         ul li { float: left; margin-right: 5px;}
-        address {display:inline-block; margin-top: 20px;}
-        address::before{content:""; width:50%;height: 1px;background: #ffffff;position: absolute;margin-top: -10px;max-width: 400px;}
+        address {display:block; margin-top: 20px;}
        }
-    .ft_right { 
-        @include borderBox;
-        float:right;width: 30%;margin-top: -100px; max-width: 200px;
-        a , span {display: block; width:70%;text-align: center; height:30px;line-height: 30px;font-size: 14px;}
-        
-        .f_center, .f_family{ 
-            @include radius(8px);
-            font-weight: 600;margin-bottom: 10px;background: #fff;color: #fe6caa;text-align: center;
-        }
-    }
-}
-
-.family{
-    position: relative;
-  ul {display: none;
-    @include radius(8px);
-      margin-top: -410px;border: 1px solid #fe6caa;width:70%;background: #fff;color: #fe6caa;letter-spacing: 20;text-align: center; z-index: 1000;position: absolute;
-      li a {border-bottom: 1px solid #ffdef1;padding: 5px 0;margin: 0 auto;}
-        } 
 }
 
 

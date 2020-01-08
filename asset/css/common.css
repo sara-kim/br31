@@ -97,7 +97,9 @@ address {
   line-height: 22px;
   color: #FE6CAA;
   overflow: hidden;
-  min-width: 320px; }
+  min-width: 320px;
+  max-width: 1080px;
+  margin: 0 auto; }
 
 #header {
   -webkit-box-sizing: border-box;
@@ -107,23 +109,23 @@ address {
   position: fixed;
   top: 0;
   left: 0;
-  height: 46px;
+  height: 60px;
   width: 100%;
   background: #ffffff; }
 
 .logo {
-  width: 110px;
+  width: 150px;
   position: absolute;
-  top: 13px;
+  top: 22px;
   left: 50%;
-  margin-left: -55px; }
+  margin-left: -75px; }
 
 .btn_menu {
   z-index: 1100;
-  top: 13px;
   width: 20px;
-  right: 30px;
-  height: 17px; }
+  height: 20px;
+  margin-top: 25px;
+  right: 30px; }
   .btn_menu, .btn_menu .line {
     position: absolute; }
   .btn_menu .line {
@@ -142,7 +144,7 @@ address {
     .btn_menu .line.btm {
       top: 14px; }
   .btn_menu.active .line {
-    background: #fff !important; }
+    background: #fff; }
   .btn_menu.active .top {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -184,7 +186,6 @@ address {
         padding: 25px 40px;
         font-size: 18px;
         font-weight: 500;
-        border-bottom: 1px solid #fe6caa;
         display: block; }
       #gnb > ul.gnb-txt > li > a::before {
         content: "";
@@ -219,28 +220,31 @@ address {
       #gnb > ul.gnb-txt ul li ul li a {
         margin-left: 50px; }
 
-.signbox {
-  display: block; }
-  .signbox .sign {
-    width: 100%;
-    height: 150px;
-    background: url("../images/main/pink_noz_bg.gif");
-    position: absolute;
-    top: 0;
-    left: 0;
+.signbox .sign {
+  -webkit-display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background: url("../images/main/pink_noz_bg.gif");
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin: 0 auto; }
+  .signbox .sign li {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    float: left;
+    display: inline-block;
     text-align: center;
-    margin: 0 auto; }
-    .signbox .sign li {
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      float: left;
-      display: block;
-      text-align: center;
-      width: 120px;
-      height: 40px;
-      background: #ffffff;
-      line-height: 40px;
-      margin-top: 80px;
+    width: 120px;
+    height: 40px;
+    background: #ffffff;
+    line-height: 40px;
+    margin-top: 50px; }
+    .signbox .sign li + li {
       margin-left: 40px; }
 
 #footer {
@@ -248,69 +252,21 @@ address {
   background: #fe6caa;
   width: 100%;
   padding: 30px 20px;
-  color: #ffffff; }
-  #footer img {
-    width: 120px;
-    margin-bottom: 10px; }
+  color: #ffffff;
+  line-height: 2; }
+  #footer a img {
+    width: 140px;
+    margin-bottom: 5px;
+    margin-left: 10%; }
   #footer .ft_left {
-    font-size: 8px;
-    width: 65%;
-    max-width: 400px; }
+    font-size: 12px;
+    width: 80%;
+    margin: 0 auto; }
     #footer .ft_left ul li {
       float: left;
       margin-right: 5px; }
     #footer .ft_left address {
-      display: inline-block;
-      margin-top: 20px; }
-    #footer .ft_left address::before {
-      content: "";
-      width: 50%;
-      height: 1px;
-      background: #ffffff;
-      position: absolute;
-      margin-top: -10px;
-      max-width: 400px; }
-  #footer .ft_right {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    float: right;
-    width: 30%;
-    margin-top: -100px;
-    max-width: 200px; }
-    #footer .ft_right a, #footer .ft_right span {
       display: block;
-      width: 70%;
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-      font-size: 14px; }
-    #footer .ft_right .f_center, #footer .ft_right .f_family {
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      background: #fff;
-      color: #fe6caa;
-      text-align: center; }
-
-.family {
-  position: relative; }
-  .family ul {
-    display: none;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    margin-top: -410px;
-    border: 1px solid #fe6caa;
-    width: 70%;
-    background: #fff;
-    color: #fe6caa;
-    letter-spacing: 20;
-    text-align: center;
-    z-index: 1000;
-    position: absolute; }
-    .family ul li a {
-      border-bottom: 1px solid #ffdef1;
-      padding: 5px 0;
-      margin: 0 auto; }
+      margin-top: 20px; }
 
 /*# sourceMappingURL=common.css.map */

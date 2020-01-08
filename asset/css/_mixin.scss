@@ -23,3 +23,8 @@
     -webkit-background-size: $value !important;
     background-size: $value !important;
  }
+ @mixin transitionDelay($value){
+     -webkit-transition-delay:$value;
+     -o-transition-delay:$value;
+     transition-delay:$value;
+ }
