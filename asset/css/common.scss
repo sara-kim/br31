@@ -147,7 +147,7 @@ body, h1, h2, h3, h4, h5, h6, ul, button, p, figure { margin: 0; padding: 0; }
 }
 .signbox{
 .sign {
-    -webkit-display: flex;display: flex;justify-content: center;align-items: center;
+    @include flexCenter;
     width: 100%;height: 150px; background:url("../images/main/pink_noz_bg.gif");position: absolute;top: 0;left: 0;text-align: center;margin: 0 auto;
     li {
         @include radius(8px);

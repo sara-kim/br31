@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "_var" , "_mixin";
 
+
 #article{
     text-align: center;
 }
@@ -55,6 +56,7 @@
         opacity: 0;
         width: 90%;height: 35px; background: #fff;display: block;margin: 0 auto;margin-top: 35px;position: relative;
         img{ width: 20px;height: 20px;position: absolute;right: 20px;margin-top: 6px;margin-right: 6px;}
+        span {font-size: 16px;display: inline-block;padding-top: 6px;font-family: baskin; font-weight: 400;}
         }
     .searchtag{
         @include transform(translateY(40px));
@@ -166,9 +168,6 @@
         float: left; display: inline-block;width: 110px;border: 1px solid #fe6caa;font-size: 14px;background: #ffffff;padding: 5px 10px; margin-left: 20px;
         &::after{content:"";position: absolute;background: url("../images/common/nav_side_on.png") no-repeat;width: 12px;height: 7px;margin-top: 7px;margin-left: 10px;}
     }
-    
-   
-
     ul {
         @include radius(8px);
         display: inline-block;display: none;
@@ -197,7 +196,6 @@
     &::before{content:""; background: url("../images/m_ice/deco_normal_2x.png")no-repeat;position: absolute;width: 145px;height: 140px;left: 0px;bottom: 20px;}
     &::after { content:""; display: block; clear: both;
     }
-    
 }
 .f_r_txt{
     float: right;position: relative;max-width: 50%;margin-right: 20px;min-height: 140px;
@@ -248,7 +246,8 @@
     width: 2px;height: 100%;background: #fe6caa;position: fixed;z-index: -1000;left: 50%;margin-left: -30%;top: 0;
 }
 .timeline_box{
-    ul li{width: 90%; margin: 0 auto;margin-top: 80px;margin-bottom: 100px;
+    ul li{
+        width: 90%; margin: 0 auto;margin-top: 80px;margin-bottom: 100px;
         &:nth-child(2) button::after{ content:"";background-image: url("../images/a_history/btn_2.png");}
         &:nth-child(2) button.on::after{background-image: url("../images/a_history/btn_2_on.png");}
         &:nth-child(3) button::after{ content:"";background-image: url("../images/a_history/btn_3.png");}
@@ -267,11 +266,16 @@
             content:""; position: absolute;left: 50%;margin-left:calc(-30% - 17px);width: 90px;height: 90px;border: 2px solid #fe6caa;margin-top: -47px;}
         &.on::before{border-color: #fff;}
         &.on{
-            @include transform(scale(1.5));
+            @include transform(scale(1.3));
             @include transition(all 0.5s);
             background-color: #fe6caa;
         }
-        &.on::after {background-image: url("../images/a_history/btn_1_on.png");}
+        &.on::after {
+            background-image: url("../images/a_history/btn_1_on.png");}
+        &{
+            @include transform(scale(1));
+            @include transition(all 0.5s);
+        }
     }
     .txt-box{
         text-align: left;width: 50%;margin-left: 40%;
@@ -282,13 +286,32 @@
 }
 .scroll_box{
     @include borderBox;
-    img {padding: 40px 0px;}
     display: none;
     width: 100%;background: #fff;color: #fe6caa;margin-top: 60px;border: 10px solid #fe6caa;
     p {width: 70%;text-align: center;margin: 40px auto;
-    &::before{content:""; position: absolute;width: 100px;height: 3px;background: #fe6caa;left: 50%;margin-left: -50px;margin-top: -20px;}}
+    &::before{content:""; position: absolute;width: 100px;height: 3px;background: #fe6caa;left: 50%;margin-left: -50px;margin-top: -20px;}
+    }
+    img {
+        width: 100%;margin-bottom: 10px;
+    }
+    .main_tab{
+        ul li {
+            -webkit-display: flex;display: flex;justify-content: center;
+            align-items: center;
+            float: left;width: 80px;padding: 3px 5px;border: 1px solid #000;margin: 0 auto;position: relative;left: 50%;
+        }
+    }
+    .swiper-container {
+        width: 80%;margin-top: 30px;margin-bottom: 30px;
+        .swiper-slide { 
+            img {width: 100%;}
+        }
+        .swiper-button-prev {left: -8px;}
+        .swiper-button-next {right: -8px;}
+        .swiper-button-next::after ,.swiper-button-prev::after {font-size: 20px;font-weight: 700;color: #fe6caa;}
+    }
+   
 }
-
 @media 
 screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dpi),

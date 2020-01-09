@@ -1,9 +1,10 @@
 $(document).ready(function(){
 	//cashbox
-	var $button = $('#article > div.menu_wrap > ul > li:nth-child(2) > div > div.f_r_txt > button');
+	var $button = $('#article .menu_wrap .f_r_txt button');
 	$button.on('click', function (){
 		alert();
 	});
+
 	//m_ice slide
 	var $menu=$("#article1 .ot_menu");
 	var $btn=$menu.find("a").first();
@@ -22,33 +23,43 @@ $(document).ready(function(){
 			$btn.find($text).text(tgTxt).closest("a").next().stop().slideUp();
 		});
 	});
+
+	//index section2 
+	var $inBtn = $('.search .searchtag ul li button');
+	$inBtn.on('click',function (){
+		var tghref = $(this).attr('data-href');
+		$(this).toggleClass('on').prev('a').attr($inBtn);
+		$('.search .searchbar span').text($(this).text()); 
+		console.log(tghref);
+		
+		var $gobtn = $('.search .searchbar img');
+		$gobtn.on('click',function (e){
+			e.preventDefault();
+			location.href = '../'+ tghref;
+		});
+	});
+	
 	//a_history
-	var $scBtn = $('#article1 .timeline_box button').eq(0);
-	$scBtn.on('click', function(e){
+	var $scBtn = $('#article1 .timeline_box button');
+	$scBtn.on("click", function(e){
 		e.preventDefault();
-		$(this).addClass('on');
-		if ($(this).addClass('on')) $('.scroll_box').eq(0).stop().slideToggle();
-		else $(this).removeClass('on').next().$('.scroll_box').stop().slideToggle();
+		$(this).toggleClass('on').next().next('.scroll_box').slideToggle();
 	} );
-	var $scBtn1 = $('#article1 .timeline_box button').eq(1);
-	$scBtn1.on('click', function(e){
-		e.preventDefault();
-		$(this).addClass('on');
-		if ($(this).addClass('on')) $('.scroll_box').eq(1).stop().slideToggle();
-		else $(this).removeClass('on').next().$('.scroll_box').stop().slideToggle();
-	} );
-	var $scBtn2 = $('#article1 .timeline_box button').eq(2);
-	$scBtn2.on('click', function(e){
-		e.preventDefault();
-		$(this).addClass('on');
-		if ($(this).addClass('on')) $('.scroll_box').eq(2).stop().slideToggle();
-		else $(this).removeClass('on').next().$('.scroll_box').stop().slideToggle();
-	} );
-	var $scBtn3 = $('#article1 .timeline_box button').eq(3);
-	$scBtn3.on('click', function(e){
-		e.preventDefault();
-		$(this).addClass('on');
-		if ($(this).addClass('on')) $('.scroll_box').eq(3).stop().slideToggle();
-		else $(this).removeClass('on').next().$('.scroll_box').stop().slideToggle();
-	} );
+
+	//swiper
+	var mySwiper1 = new Swiper ('.scroll_box .swiper-container', {
+		// 필요한 옵션을 추가함
+		//direction: 'vertical',    //horizontal(기본), vertical
+		loop: true,               //가장 처음과 마지막에서 무한 롤링 true, false(기본)
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		  hideOnClick: false,
+		},
+		pagination: {
+		  el: '.swiper-pagination',
+		  type: 'fraction',   //bullets(동그라미아이콘), fraction (현재/전체)
+		  clickable: true,    //클릭하여 슬라이더 이동
+		},
+	  });
 });

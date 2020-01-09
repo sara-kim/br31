@@ -107,6 +107,12 @@
       right: 20px;
       margin-top: 6px;
       margin-right: 6px; }
+    .search .searchbar span {
+      font-size: 16px;
+      display: inline-block;
+      padding-top: 6px;
+      font-family: baskin;
+      font-weight: 400; }
   .search .searchtag {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
@@ -599,14 +605,20 @@
   .timeline_box .story_img.on::before {
     border-color: #fff; }
   .timeline_box .story_img.on {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
     background-color: #fe6caa; }
   .timeline_box .story_img.on::after {
     background-image: url("../images/a_history/btn_1_on.png"); }
+  .timeline_box .story_img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
 .timeline_box .txt-box {
   text-align: left;
   width: 50%;
@@ -628,8 +640,6 @@
   color: #fe6caa;
   margin-top: 60px;
   border: 10px solid #fe6caa; }
-  .scroll_box img {
-    padding: 40px 0px; }
   .scroll_box p {
     width: 70%;
     text-align: center;
@@ -643,6 +653,35 @@
       left: 50%;
       margin-left: -50px;
       margin-top: -20px; }
+  .scroll_box img {
+    width: 100%;
+    margin-bottom: 10px; }
+  .scroll_box .main_tab ul li {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 80px;
+    padding: 3px 5px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    position: relative;
+    left: 50%; }
+  .scroll_box .swiper-container {
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    .scroll_box .swiper-container .swiper-slide img {
+      width: 100%; }
+    .scroll_box .swiper-container .swiper-button-prev {
+      left: -8px; }
+    .scroll_box .swiper-container .swiper-button-next {
+      right: -8px; }
+    .scroll_box .swiper-container .swiper-button-next::after, .scroll_box .swiper-container .swiper-button-prev::after {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fe6caa; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dpi), screen and (min-resolution: 2dppx) {
   .map {

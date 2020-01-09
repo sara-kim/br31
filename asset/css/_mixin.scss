@@ -28,3 +28,9 @@
      -o-transition-delay:$value;
      transition-delay:$value;
  }
+ @mixin flexCenter{
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
